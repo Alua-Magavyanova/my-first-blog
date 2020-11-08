@@ -1,22 +1,14 @@
-<html>
-    <head>
-        <title>Blog about stars</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Blog about stars</a></h1>
-        </div>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-        <div>
-            <p>published: 06.11.2020, 17:46</p>
-            <h2><a href="">A star is born</a></h2>
-            <p> Birth takes place inside hydrogen-based dust clouds called nebulae. Over the course of thousands of years, gravity causes pockets of dense matter inside the nebula to collapse under their own weight.</p>
-        </div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
-        <div>
-            <p>published: 07.11.2020, 17:46</p>
-            <h2><a href="">All that glitters</a></h2>
-            <p>Some stars shine more brightly than others. Their brightness is a factor of how much energy they put out–known as luminosity–and how far away from Earth they are. </p>
-        </div>
-    </body>
-</html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
