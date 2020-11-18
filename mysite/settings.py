@@ -25,7 +25,7 @@ SECRET_KEY = 'gd(ok4l4tzl9*ku=vb90a0sl$opl2e*6ke(l5_o0v0axyu^_%-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['aluam.pythonanywhere.com']
 
 
 # Application definition
@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/aluam/my-first-blog/static/'
 
 LOGIN_REDIRECT_URL = '/'
 
