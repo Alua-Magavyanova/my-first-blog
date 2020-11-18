@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+<div class="text-center">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+  <h1 class="h1 mb-1 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">
+      <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+      </tr>
+  </label>
+  <input id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+  <label for="inputPassword" class="sr-only">
+      <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+  </label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <div class="checkbox mb-2">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Sign in</button>
+    <input type="hidden" name="next" value="{{ next }}" />
+  <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form>
+</div>
+{% endblock %}
