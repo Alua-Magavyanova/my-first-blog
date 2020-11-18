@@ -25,7 +25,7 @@ SECRET_KEY = 'gd(ok4l4tzl9*ku=vb90a0sl$opl2e*6ke(l5_o0v0axyu^_%-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aluam.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
